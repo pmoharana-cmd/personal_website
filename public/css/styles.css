@@ -1,25 +1,10 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.middle-part {
-  margin: 10%;
-}
-
-.desc-text {
-  overflow-wrap: break-word;
-  padding-right: 30%;
-}
+/* Left and Right Sidebars */
 
 .sidebar {
   font-size: 30px;
   width: 30px;
   height: auto;
   position: fixed;
-  left: 40px;
-  bottom: 0;
 }
 
 .sidebar::after {
@@ -27,11 +12,53 @@
   display: block;
   width: 1px;
   height: 90px;
-  margin: 11px 0 0 11px;
   background-color: blue;
 }
 
-a.nav-link {
+.sidebar-left {
+  left: 40px;
+  bottom: 0;
+}
+
+.sidebar-right {
+  right: 38px;
+  bottom: 0;
+  font-size: 15px;
+}
+
+.sidebar-left::after {
+  margin: 11px 0 0 11px;
+}
+
+.sidebar-right::after {
+  margin: 11px 0 0 12px;
+}
+
+.sidebar-email {
+  transform: rotate(90deg);
+  position: relative;
+  right: 95px;
+  top: -108px;
+}
+
+.sidebar-links li a {
   padding: 0;
   padding-bottom: 7px;
+}
+
+/* Reminder to self to add media queries for sidebars */
+
+/* Introduction */
+
+.introduction-body {
+  margin: 5% 15%;
+}
+
+.big-heading {
+  font-size: 80px;
+}
+
+.desc-text {
+  overflow-wrap: break-word;
+  padding-right: 30%;
 }
