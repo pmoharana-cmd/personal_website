@@ -1,9 +1,28 @@
 /* Navbar */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  counter-reset: title;
+}
+
+.main-nav {
+  counter-reset: section;
+}
 
 .main-nav .nav-item .nav-link {
   font-size: 18px;
+  position: relative;
 }
 
+.main-nav .nav-item a span::before {
+  display: inline-block;
+  content: "0" counter(section);
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: -0.9rem;
+  counter-increment: section;
+}
 /* Left and Right Sidebars */
 
 .sidebar {
@@ -43,8 +62,8 @@
 .sidebar-email {
   transform: rotate(90deg);
   position: relative;
-  right: 95px;
-  top: -108px;
+  right: 110px;
+  top: -125px;
 }
 
 .sidebar-links li a {
@@ -61,7 +80,7 @@
   position: relative;
 }
 
-.introduction:before {
+.introduction::before {
   content: " ";
   display: block;
   position: absolute;
@@ -92,18 +111,58 @@
   margin-bottom: -12px;
 }
 
-.subheading {
+.mission-statement {
   font-size: 80px;
   color: gray;
   margin-top: -10px;
 }
 
-.desc-text {
-  padding-right: 30%;
+.roles {
+  font-size: 25px;
 }
 
 /* About */
 
 .about {
-  padding-top: 15%;
+  padding: 5% 0 5% 15%;
+}
+
+.about-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: "0" counter(title) ". ";
+  counter-increment: title;
+  left: 0;
+  color: gray;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -19px;
+  left: 220px;
+  width: 240px;
+  height: 1px;
+  background-color: blue;
+}
+
+/* Blog */
+
+.blog {
+  padding: 0 20%;
+}
+
+/* Projects */
+
+.projects {
+  padding: 5% 0 5% 15%;
+}
+
+/* Contact */
+
+.contact {
+  padding: 0 20%;
 }
